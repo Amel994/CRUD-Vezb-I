@@ -1,0 +1,19 @@
+﻿<Window x:Class="CRUD_Vezb_I.Editor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRUD_Vezb_I"
+        mc:Ignorable="d"
+        Title="Editor" Height="450" Width="800">
+    <UniformGrid Columns="2">
+        <Label Content="Naziv: " FontSize="24"/>
+        <TextBox Text="{Binding Naziv}" FontSize="24"/>
+        <Label Content="Cena: " FontSize="24"/>
+        <TextBox Text="{Binding Ucena}" FontSize="24"/>
+        <Label Content="Marza: " FontSize="24"/>
+        <TextBox Text="{Binding MarzaProc}" FontSize="24"/>
+        <Button Content="Otkazi" FontSize="24" Click="Otkazi"/>
+        <Button Content="OK" FontSize="24" Click="OK"/>
+    </UniformGrid>
+</Window>
