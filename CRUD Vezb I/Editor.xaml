@@ -8,11 +8,11 @@
         Title="Editor" Height="450" Width="800">
     <UniformGrid Columns="2">
         <Label Content="Naziv: " FontSize="24"/>
-        <TextBox Text="{Binding Naziv}" FontSize="24"/>
+        <TextBox Text="{Binding Naziv, UpdateSourceTrigger=Explicit}" FontSize="24"/>
         <Label Content="Cena: " FontSize="24"/>
-        <TextBox Text="{Binding Ucena}" FontSize="24"/>
+        <TextBox Text="{Binding Ucena, UpdateSourceTrigger=Explicit}" FontSize="24"/>
         <Label Content="Marza: " FontSize="24"/>
-        <TextBox Text="{Binding MarzaProc}" FontSize="24"/>
+        <TextBox Text="{Binding MarzaProc, UpdateSourceTrigger=Explicit}" FontSize="24"/>
         <Button Content="Otkazi" FontSize="24" Click="Otkazi"/>
         <Button Content="OK" FontSize="24" Click="OK"/>
     </UniformGrid>

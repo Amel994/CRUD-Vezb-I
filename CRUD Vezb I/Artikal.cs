@@ -67,5 +67,14 @@ namespace CRUD_Vezb_I
 
         }
 
+        public Artikal(string n, decimal uc, int m)
+        {
+            Naziv = n;
+            Ucena = uc;
+            MarzaProc = m;
+        }
+
+        public Artikal() { }
+
     }
 }

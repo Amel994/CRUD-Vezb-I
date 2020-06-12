@@ -8,7 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
-            <Button Content="Dodaj" Click="Dodavanje" />
+            <Button Content="Dodaj" Click="Dodavanje" FontSize="24" />
+            <Button Content="Izmeni" FontSize="24" Margin=" 0 20" Click="Izmena"/>
+            <Button Content="Obrisi" FontSize="24" Click="Brisanje" />
         </StackPanel>
         <DataGrid Name="dg" ColumnWidth="*" IsReadOnly="True"/>
     </DockPanel>
