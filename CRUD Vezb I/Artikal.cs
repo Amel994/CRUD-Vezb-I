@@ -52,7 +52,7 @@ namespace CRUD_Vezb_I
 
         public override string ToString() => $"{Sifra} {Naziv}";
 
-        public override bool Equals(object obj) => obj is Artikal a && this.Sifra == a.Sifra;
+        /*public override bool Equals(object obj) => obj is Artikal a && this.Sifra == a.Sifra;
 
         public override int GetHashCode()
         {
@@ -65,7 +65,7 @@ namespace CRUD_Vezb_I
                 return Sifra;
             }
 
-        }
+        }*/
 
         public Artikal(string n, decimal uc, int m)
         {

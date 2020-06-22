@@ -6,12 +6,43 @@
         xmlns:local="clr-namespace:CRUD_Vezb_I"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
-            <Button Content="Dodaj" Click="Dodavanje" FontSize="24" />
-            <Button Content="Izmeni" FontSize="24" Margin=" 0 20" Click="Izmena"/>
-            <Button Content="Obrisi" FontSize="24" Click="Brisanje" />
-        </StackPanel>
-        <DataGrid Name="dg" ColumnWidth="*" IsReadOnly="True"/>
-    </DockPanel>
+    <TabControl>
+        <TabItem Header="Racuni" FontSize="16">
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Left" Width="300">
+                    <StackPanel Name="StackUnos"  DockPanel.Dock="Top" Orientation="Horizontal">
+                        <UniformGrid Columns="3">
+                            <TextBox Text="{Binding TrenutnaSifra}" MinWidth="100" FontSize="24" />
+                            <TextBox Text="{Binding TrenutnaKolicina}" MinWidth="100" FontSize="24" />
+                            <Button Content="Unesi" FontSize="24" Click="UnosArtKol" />
+                        </UniformGrid>
+                    </StackPanel>
+                    <StackPanel Name="StackIzdavanje"  DockPanel.Dock="Bottom">
+                        <UniformGrid Columns="2">
+                            <Label Content="Total:" FontSize="24" HorizontalAlignment="Right"/>
+                            <Label Content="{Binding Total}" FontSize="24"/>
+                            <Button Content="Otkazi" FontSize="24"/>
+                            <Button Content="Izdaj" FontSize="24" Click="IzdavanjeRacuna"/>
+                        </UniformGrid>
+                    </StackPanel>
+                    <DataGrid Name="dgStavke" ColumnWidth="*"/>
+                </DockPanel>
+                <DataGrid Name="dgRacuni" ColumnWidth="*"/>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Artikli" FontSize="16">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
+                    <Button Content="Dodaj" Click="Dodavanje" FontSize="24" />
+                    <Button Content="Izmeni" FontSize="24" Margin=" 0 20" Click="Izmena"/>
+                    <Button Content="Obrisi" FontSize="24"  Click="Brisanje" />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                    <Label Content="Pretraga: " FontSize="24" />
+                    <TextBox Text="{Binding Pretraga, UpdateSourceTrigger=PropertyChanged}" FontSize="24" MinWidth="200"/>
+                </StackPanel>
+                <DataGrid Name="dg" ColumnWidth="*" IsReadOnly="True"/>
+            </DockPanel>
+        </TabItem>
+    </TabControl>
 </Window>
